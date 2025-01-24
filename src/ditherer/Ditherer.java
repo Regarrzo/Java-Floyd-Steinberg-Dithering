@@ -30,28 +30,20 @@ public class Ditherer {
 
 				if (!(x == img.getWidth() - 1)) {
 					img.setRGB(x + 1, y,
-							((new VectorRGB(img.getRGB(x + 1, y)).add(error.scalarMultiply((float) 7 / 16)))
-									.clip(0, 255).toRGB()));
+							((new VectorRGB(img.getRGB(x + 1, y)).add(error.scalarMultiply((float) 7 / 16))).clip(0, 255).toRGB()));
 
 					if (!(y == img.getHeight() - 1)) {
 						img.setRGB(x + 1, y + 1,
-								((new VectorRGB(img.getRGB(x + 1, y + 1)).add(error.scalarMultiply((float) 1 / 16)))
-										.clip(0, 255).toRGB()));
+								((new VectorRGB(img.getRGB(x + 1, y + 1)).add(error.scalarMultiply((float) 1 / 16))).clip(0, 255).toRGB()));
 					}
 				}
 
 				if (!(y == img.getHeight() - 1))
-
 				{
-
-					img.setRGB(x, y + 1,
-							((new VectorRGB(img.getRGB(x, y + 1)).add(error.scalarMultiply((float) 3 / 16)))
-									.clip(0, 255).toRGB()));
+					img.setRGB(x, y + 1, ((new VectorRGB(img.getRGB(x, y + 1)).add(error.scalarMultiply((float) 3 / 16))).clip(0, 255).toRGB()));
 
 					if (!(x == 0)) {
-						img.setRGB(x - 1, y + 1, ((new VectorRGB(img.getRGB(x - 1, y + 1))
-								.add(error.scalarMultiply(5 / 16)).clip(0, 255).toRGB())));
-
+						img.setRGB(x - 1, y + 1, ((new VectorRGB(img.getRGB(x - 1, y + 1)).add(error.scalarMultiply((float) 5 / 16)).clip(0, 255).toRGB())));
 					}
 				}
 
