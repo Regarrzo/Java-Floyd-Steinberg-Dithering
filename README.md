@@ -1,5 +1,5 @@
 # Java-Floyd-Steinberg-Dithering
-Java implementation of the Floyd-Steinberg Dithering Algorithm. Allows dithering images with custom color palettes. There are no dependencies.
+Java implementation of the Floyd-Steinberg Dithering Algorithm. Allows dithering images with custom color palettes. There are no external dependencies.
 
 ### Usage:
 You need two things: An instance of the ColorPalette class and a ditherer instance.
